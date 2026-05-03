@@ -1,0 +1,23 @@
+name: 3wd
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - pip
+  - pip:
+      - pyserial
+      - rich
+
+# ── ZED SDK (NOT installable via pip/conda) ────────────────────
+# The ZED SDK must be installed separately:
+#   1. Download from https://www.stereolabs.com/developers/release
+#   2. Run the installer: bash ZED_SDK_*.run
+#   3. Install the Python bindings (run once after SDK install):
+#        python /usr/local/zed/get_python_api.py
+#
+# After that, import pyzed.sl will work inside this environment.
+# The rest of the codebase (serial_link, controller, etc.) works
+# without the ZED SDK installed.
