@@ -243,9 +243,9 @@ void stopAll() {
   motor3.setSpeed(0);
 }
 void applyRotationPWM(int pwm) {
-  motor1.setSpeed(pwm);
-  motor2.setSpeed(pwm);
-  motor3.setSpeed(pwm);
+  motor1.setSpeed(-pwm);
+  motor2.setSpeed(-pwm);
+  motor3.setSpeed(-pwm);
 }
 void beginRotateTo(float abs_yaw_deg) {
   stopAll();
