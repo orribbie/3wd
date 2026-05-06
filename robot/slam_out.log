@@ -1,0 +1,14 @@
+[SirBridge] Flashing /home/slam/sir/arduino/sir_3wd_base/sir_3wd_base.ino → /dev/ttyACM0  (board: arduino:avr:mega)
+[SirBridge] This takes ~30 s…
+[SirBridge] Flash successful.
+[SirBridge] Connecting to /dev/ttyACM0 @ 115200 baud…
+[SirBridge] Zero response: [reset]
+[SirBridge] Log start: [log on] label=ekf
+[SirBridge] Ready.
+[VoxelMap] Initialized on device: cuda, voxel_size=0.03
+╭────── viser (listening *:8099) ───────╮
+│             ╷                         │
+│   HTTP      │ http://localhost:8099   │
+│   Websocket │ ws://localhost:8099     │
+│             ╵                         │
+╰───────────────────────────────────────╯

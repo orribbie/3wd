@@ -135,8 +135,11 @@ def main():
             now = time.time()
             if now - last_print >= interval:
                 px, pz, py, yaw = pose
-                dpx  = px - px0
-                dpz  = pz - pz0
+                dx_world = px - px0
+                dz_world = -(pz - pz0)
+                cy0, sy0 = math.cos(yaw0), math.sin(yaw0)
+                dpx = dx_world * cy0 - dz_world * sy0
+                dpz = dx_world * sy0 + dz_world * cy0
                 dyaw = math.degrees(yaw - yaw0)
                 dyaw = ((dyaw + 180) % 360) - 180
                 elapsed = now - rate_t0

@@ -956,6 +956,8 @@ class ViserMirrorThread:
 
     # ----------------------------- map points -----------------------------
     def _mirror_map_points_once(self, t0: float):
+        if not self._show_live_map:
+            return
         if self.map_provider is None:
             return
         # Throttle to map_update_hz
